@@ -11,11 +11,14 @@ class App extends Component<{}, State> {
       count: 0,
     };
   }
+
   makeIncrementer = (amount: number) => () =>
     this.setState((prevState: State) => ({
       count: prevState.count + amount,
     }));
+
   increment = this.makeIncrementer(1);
+  
   render() {
     return (
       <div>
